@@ -29,3 +29,21 @@ df = pd.DataFrame(weather_list)
 file_exists = os.path.isfile('weather_data.csv')
 df.to_csv('weather_data.csv', mode='a', header=not file_exists, index=False)
 print("Weather data saved to weather_data.csv")
+
+df = pd.read_csv('weather_data.csv')
+print(df.head())
+
+# Check for null values
+print(df.isnull().sum())
+
+# Drop missing values if any
+df = df.dropna()
+
+# Remove duplicate rows if any
+df = df.drop_duplicates()
+
+df.to_csv('cleaned_weather_data.csv', index=False)
+print("✅ Cleaned data saved to 'cleaned_weather_data.csv'")
+
+
+
