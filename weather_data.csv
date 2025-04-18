@@ -1,4 +1,4 @@
-
+timestamp,city,weather,temperature,humidity,wind_speed
 2025-04-16 11:33:12,Jaffna,clear sky,30.45,67,2.53
 2025-04-16 11:33:13,Colombo,broken clouds,29.32,72,2.62
 2025-04-16 11:33:13,Kandy,scattered clouds,29.42,59,2.2
