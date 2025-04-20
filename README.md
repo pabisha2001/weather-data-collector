@@ -1,39 +1,33 @@
-# 🌦️ Weather Data Collection Project
+# 🌦️ Weather Data Engineering Project
 
-This project collects real-time weather data for a specific city (Jaffna, Sri Lanka) using the OpenWeatherMap API. The data is fetched and stored in a structured format (CSV file) for future analysis or visualization.
+This project collects real-time weather data from OpenWeatherMap API, cleans it, stores it in a SQLite database, and visualizes it using Python.
 
----
+## 🚀 Project Structure
 
-## 📌 Features
+- **collectweather.py** – Collects weather data from the API
+- **run_pipeline.py** – Orchestrates data collection, cleaning, and storing
+- **store_weather.py** – Stores cleaned data into `weather_data.db`
+- **visualize_weather.py** – Generates graphs for analysis
+- **cleaned_weather_data.csv** – Cleaned output
+- **weather_data.db** – SQLite database
 
-- Fetches live weather data (temperature, humidity, wind speed, etc.)
-- Stores data in a CSV file with timestamps
-- Easy to run and modify
-- Clean and readable Python code
-
----
-
-## 📁 Project Structure
-
-Weather_Project/ ├── collect_weather.py # Main script to collect and save weather data ├── weather_data.csv # Output CSV file with collected data └── README.md # Project documentation
-
-
----
+## 📊 Visualizations
+- Temperature over time
+- Average temperature by city
+- Humidity over time
+- Wind speed vs temperature
 
 ## 🛠️ Technologies Used
+- Python
+- SQLite
+- Pandas
+- Matplotlib & Seaborn
 
-- Python 3
-- `requests` for API calls
-- `pandas` for data handling
-- OpenWeatherMap API
-
----
-
-## 📦 Requirements
-
-Before running the script, install the required packages:
+## 💻 How to Run
 
 ```bash
-pip install requests pandas
+# Collect, clean, and store weather data
+python run_pipeline.py
 
-
+# Visualize data
+python visualize_weather.py
